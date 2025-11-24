@@ -1,16 +1,8 @@
 - name: removing duplicates
   hosts: localhost
   vars:
-  numbers: [1, 2, 2, 3, 4, 4, 5, 5, 5, 6, 6]
+   numbers: [1, 2, 2, 3, 4, 4, 5, 5, 5, 6, 6]
   tasks:
-  - name: Show original list
-    ansible.builtin.debug:
-      msg: "Original list: {{ numbers }}"
-
-  - name: Remove duplicates from the list
-    ansible.builtin.set_fact:
-      unique_numbers: "{{ numbers | unique }}"  
-            
-  - name: Show list after removing duplicates
-    ansible.builtin.debug:
-      msg: "List after removing duplicates: {{ unique_numbers }}"
+    - name: display unique numbers
+      ansible.builtin.debug:
+        msg: "Unique numbers are: {{ numbers | unique }}"
