@@ -1,0 +1,6 @@
+- name: functions in yaml
+  hosts: localhost
+  tasks:
+    - name: upper case function
+      ansible.builtin.debug:
+        msg: "{{ 'ansible automation' | upper }}"
