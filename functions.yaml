@@ -1,6 +1,6 @@
 - name: functions in yaml
   hosts: localhost
-  vars:
+  vars_prompt:
    - name: number
      prompt: "Enter a number"
      private: no
