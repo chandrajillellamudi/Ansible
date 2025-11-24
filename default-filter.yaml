@@ -1,0 +1,6 @@
+- name: default filter example
+  hosts: localhost
+  tasks:
+    - name: Show default filter usage
+      ansible.builtin.debug:
+        msg: "Hi, I am learning {{course | default('DevOps with AWS')}}"
