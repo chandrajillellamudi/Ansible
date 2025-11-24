@@ -7,4 +7,6 @@
   tasks:
     - name: display play level variables
       ansible.builtin.debug:
+      vars:
+        course: "Devops with Aws"
         msg: "Course: {{ course }}, Trainer: {{ trainer }}, Duration: {{ duration }}"
