@@ -6,6 +6,6 @@
       b: 2
       c: 3
   tasks:
-    - name: Convert dict to list of key-value pairs
+    - name: Convert dict to list and display
       ansible.builtin.debug:
         msg: "Dictionary as List: {{ my_dict | dict2items }}"
