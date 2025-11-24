@@ -13,4 +13,4 @@
     - name: display numbers
       ansible.builtin.debug:
         msg: "Number: {{ item }}"
-      loop: "{{ range(1, 6) | list }}"
+      loop: "{{ range(1, 3) | list }}"
