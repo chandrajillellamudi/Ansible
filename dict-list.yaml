@@ -1,0 +1,11 @@
+- name: Converting dictionary to list
+  hosts: localhost
+  vars:
+    my_dict:
+      a: 1
+      b: 2
+      c: 3
+  tasks:
+    - name: Convert dict to list of key-value pairs
+      ansible.builtin.debug:
+        msg: "Dictionary as List: {{ my_dict | dict2items }}"
