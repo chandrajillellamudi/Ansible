@@ -1,0 +1,6 @@
+- name: Variables from command line arguments
+  hosts: localhost
+  tasks:
+    - name: display variables from command line arguments
+      ansible.builtin.debug:
+        msg: "Hi, I am learning {{ course }} course under the guidance of {{ trainer }} for {{ duration }}"
