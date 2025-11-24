@@ -6,7 +6,7 @@
       ansible.builtin.dnf:
         name: '{{ item }}'
         state: present
-        loop:
-         -nginx
-         -git
-         -mysql
+      loop:
+        - nginx
+        - git
+        - mysql
