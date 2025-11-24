@@ -1,6 +1,18 @@
 - name: functions in yaml
   hosts: localhost
+  vars:
+   - name: number
+     prompt: "Enter a number"
+     private: no
   tasks:
     - name: upper case function
       ansible.builtin.debug:
         msg: "{{ 'ansible automation' | upper }}"
+    - name: check number
+      ansible.builtin.debug:
+       msg: "Given number {{ number}} is less than 10"
+      when: number | int < 10
+    - name: check number greater than 10
+      ansible.builtin.debug:
+       msg: "Given number {{ number}} is greater than or equal to 10"
+      when: number | int >= 10
