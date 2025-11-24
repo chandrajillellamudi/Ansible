@@ -1,0 +1,11 @@
+- name: finding min and max values
+  hosts: localhost
+  vars:
+    ages: [12, 34, 23, 45, 67, 89, 21, 43]
+    tasks:
+      - name: display minimum age
+        ansible.builtin.debug:
+          msg: "The minimum age is: {{ ages | min }}"
+      - name: display maximum age
+        ansible.builtin.debug:
+          msg: "The maximum age is: {{ ages | max }}"
