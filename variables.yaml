@@ -6,7 +6,7 @@
     duration: "120 hours"
   tasks:
     - name: display play level variables
-      ansible.builtin.debug:
       vars:
         course: "Devops with Aws"
+      ansible.builtin.debug:
         msg: "Course: {{ course }}, Trainer: {{ trainer }}, Duration: {{ duration }}"
