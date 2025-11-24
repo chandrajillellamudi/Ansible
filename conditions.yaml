@@ -9,6 +9,10 @@
     - name: print user info
       ansible.builtin.debug:
         msg: "user info {{USER}}"
+
+    - name: creating user
+      ansible.builtin.command: useradd expenseuser
+      when: USER.rc != 0
         
       
     - name : say hello if user exists
