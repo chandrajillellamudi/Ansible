@@ -1,14 +1,9 @@
 - name: conditions in yaml
   hosts: localhost
-  vars:
-    age: 20
   tasks:
-    - name: Check age condition
+    - name: checking user exists or not
+      ansible.builtin.command: id expenseuser
+      
+    - name : say hello if user exists
       ansible.builtin.debug:
-        msg: "You are eligible to vote."
-      when: age >= 18
-
-    - name: Check another age condition
-      ansible.builtin.debug:
-        msg: "You are not eligible to vote."
-      when: age < 18
+        msg: "Hello, user exists!"
