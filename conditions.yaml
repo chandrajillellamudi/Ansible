@@ -1,5 +1,7 @@
 - name: conditions in yaml
   hosts: localhost
+  vars:
+    age: 20
   tasks:
     - name: Check age condition
       ansible.builtin.debug:
