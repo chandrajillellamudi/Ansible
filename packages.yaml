@@ -4,9 +4,9 @@
   tasks:
     - name: Install required packages
       ansible.builtin.dnf:
-        name: '{{ item }}'
-        state: present
+        name: '{{ item.name }}'
+        state: '{{ item.state }}'
       loop:
-        - nginx
-        - git
-        - mysql
+        - {name: git, state: present}
+        - {name: mysql, state: absent}
+        - {name: nginx, state: absent}
