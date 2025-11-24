@@ -1,0 +1,13 @@
+- name: Converting list to dictionary
+  hosts: localhost
+  vars:
+    my_list:
+       [
+        {'key': 'a', 'value': 1},
+        {'key': 'b', 'value': 2},
+        {'key': 'c', 'value': 3}
+       ]
+  tasks:
+    - name: Convert list to dict and display
+      ansible.builtin.debug:
+        msg: "List as Dictionary: {{ my_list | items2dict }}" 
