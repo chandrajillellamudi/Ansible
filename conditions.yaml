@@ -5,7 +5,7 @@
   tasks:
    - name: check even or odd
      ansible.builtin.set_fact:
-        number: 10
+        number: {{number | int}}
    - name: display even or odd message
      ansible.builtin.debug:
         msg: "The number {{ number }} is even"
