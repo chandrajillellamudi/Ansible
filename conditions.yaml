@@ -3,11 +3,12 @@
   tasks:
     - name: checking user exists or not
       ansible.builtin.command: id expenseuser
-      register: user_check
+      register: USER
       ignore_errors: yes
 
-    # - name: create user if not exists
-    #   ansible.builtin.command: useradd
+    - name: print user info
+      ansible.builtin.debug:
+        msg: "user info {{USER}}"
         
       
     - name : say hello if user exists
